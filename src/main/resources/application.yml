@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: bookSystem
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_example?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 161011zz
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+demo:
+  security:
+    permit-all-path:
+      - /auth/**
+      - /swagger-ui.html
+      - /webjars/**
+      - /swagger-resources/**
+      - /v2/*
+      - /csrf
